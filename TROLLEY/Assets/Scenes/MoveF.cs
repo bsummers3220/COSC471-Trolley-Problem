@@ -23,10 +23,10 @@ public class TrolleyController : MonoBehaviour
         // Check if the trolley can switch rails
         if (!isMoving && (Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.RightArrow)))
         {
-            if (Input.GetKeyDown(KeyCode.LeftArrow))
-                StartCoroutine(RotateTrolley(-rotationAmount)); // Rotate left by rotationAmount degrees
-            else if (Input.GetKeyDown(KeyCode.RightArrow))
-                StartCoroutine(RotateTrolley(rotationAmount)); // Rotate right by rotationAmount degrees
+            // if (Input.GetKeyDown(KeyCode.LeftArrow))
+            //     StartCoroutine(RotateTrolley(-rotationAmount)); // Rotate left by rotationAmount degrees
+            // else if (Input.GetKeyDown(KeyCode.RightArrow))
+            //     StartCoroutine(RotateTrolley(rotationAmount)); // Rotate right by rotationAmount degrees
         }
 
         // Check if the trolley has stopped and allow user input to resume movement
@@ -71,7 +71,7 @@ public class TrolleyController : MonoBehaviour
         }
     }
 
-    private IEnumerator RotateTrolley(float angle)
+    public IEnumerator RotateTrolley(float angle)
     {
         // Gradually rotate the trolley to align with the new direction
         float t = 0f;
